@@ -444,7 +444,9 @@ body.theme-light .theme-icon-moon {
 }
 
 .skill-icon {
-  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
 }
 
 .skill-name {
