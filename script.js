@@ -56,15 +56,60 @@
     });
   }
 
+  // Dark / Light theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  const THEME_KEY = 'zohaib-portfolio-theme';
+
+  function getPreferredTheme() {
+    try {
+      return localStorage.getItem(THEME_KEY) || 'dark';
+    } catch (e) {
+      return 'dark';
+    }
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.body.classList.add('theme-light');
+      if (themeToggle) {
+        themeToggle.setAttribute('aria-label', 'Switch to dark theme');
+        themeToggle.setAttribute('title', 'Switch to dark theme');
+      }
+    } else {
+      document.body.classList.remove('theme-light');
+      if (themeToggle) {
+        themeToggle.setAttribute('aria-label', 'Switch to light theme');
+        themeToggle.setAttribute('title', 'Switch to light theme');
+      }
+    }
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch (e) {}
+    updateHeaderBackground();
+  }
+
+  function updateHeaderBackground() {
+    if (!header) return;
+    var isLight = document.body.classList.contains('theme-light');
+    if (window.scrollY > 50) {
+      header.style.background = isLight ? 'rgba(255, 255, 255, 0.95)' : 'rgba(12, 12, 15, 0.95)';
+    } else {
+      header.style.background = isLight ? 'rgba(245, 245, 247, 0.9)' : 'rgba(12, 12, 15, 0.85)';
+    }
+  }
+
+  applyTheme(getPreferredTheme());
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var next = document.body.classList.contains('theme-light') ? 'dark' : 'light';
+      applyTheme(next);
+    });
+  }
+
   // Optional: subtle header background on scroll
   if (header) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 50) {
-        header.style.background = 'rgba(12, 12, 15, 0.95)';
-      } else {
-        header.style.background = 'rgba(12, 12, 15, 0.85)';
-      }
-    });
+    window.addEventListener('scroll', updateHeaderBackground);
   }
 
 })();
