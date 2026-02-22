@@ -112,4 +112,25 @@
     window.addEventListener('scroll', updateHeaderBackground);
   }
 
+  // Back to top: show when scrolled, scroll to top on click
+  const backToTop = document.getElementById('back-to-top');
+  if (backToTop) {
+    var scrollThreshold = 300;
+    function toggleBackToTop() {
+      if (window.scrollY > scrollThreshold) {
+        backToTop.classList.add('is-visible');
+        backToTop.style.display = '';
+      } else {
+        backToTop.classList.remove('is-visible');
+        backToTop.style.display = 'none';
+      }
+    }
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    toggleBackToTop();
+
+    backToTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
 })();

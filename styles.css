@@ -621,6 +621,39 @@ body.theme-light .theme-icon-moon {
   color: var(--text-muted);
 }
 
+/* ===== Back to top ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 1.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all var(--transition);
+}
+
+.back-to-top:hover {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.back-to-top.is-visible {
+  display: flex !important;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .nav-menu {
