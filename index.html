@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zohaib Jawaid | Mobile & Website Developer</title>
+  <meta name="description" content="Zohaib Jawaid - Mobile and Website Developer with 8 years of industrial experience. React, Node.js, Angular, MongoDB, SQL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#hero" class="nav-logo">ZJ</a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-title">Zohaib Jawaid</h1>
+          <p class="hero-subtitle">Mobile & Website Developer</p>
+          <p class="hero-tagline">8 years building products that scale</p>
+          <a href="#projects" class="btn btn-primary">View my work</a>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="assets/profile.png" alt="Zohaib Jawaid" class="hero-image" width="320" height="320">
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section-title">About me</h2>
+        <div class="about-grid">
+          <div class="about-photo-wrap">
+            <img src="assets/profile.png" alt="Zohaib Jawaid" class="about-photo" width="280" height="280">
+          </div>
+          <div class="about-content">
+            <p class="about-lead">
+              I'm a <strong>Mobile and Website Developer</strong> with <strong>8 years</strong> of industrial experience, turning ideas into reliable, user-focused applications.
+            </p>
+            <p>
+              I work across the stack—frontend, backend, and databases—and enjoy building clean architectures and smooth user experiences. Whether it's a mobile app, a web platform, or APIs that power them, I focus on performance, maintainability, and clear code.
+            </p>
+            <p>
+              When I'm not coding, I keep up with the latest in web and mobile tech so I can bring modern solutions to every project.
+            </p>
+          </div>
+          <div class="about-meta">
+            <div class="meta-card">
+              <span class="meta-value">8+</span>
+              <span class="meta-label">Years Experience</span>
+            </div>
+            <div class="meta-card">
+              <span class="meta-value">Full Stack</span>
+              <span class="meta-label">Mobile & Web</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+        <div class="skills-grid">
+          <div class="skill-card" data-skill="react">
+            <span class="skill-icon">⚛️</span>
+            <span class="skill-name">React</span>
+          </div>
+          <div class="skill-card" data-skill="nodejs">
+            <span class="skill-icon">🟢</span>
+            <span class="skill-name">Node.js</span>
+          </div>
+          <div class="skill-card" data-skill="angular">
+            <span class="skill-icon">🅰️</span>
+            <span class="skill-name">Angular</span>
+          </div>
+          <div class="skill-card" data-skill="mongodb">
+            <span class="skill-icon">🍃</span>
+            <span class="skill-name">MongoDB</span>
+          </div>
+          <div class="skill-card" data-skill="sql">
+            <span class="skill-icon">🗄️</span>
+            <span class="skill-name">SQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Selected work</p>
+        <div class="project-filters" role="tablist" aria-label="Filter projects by category">
+          <button type="button" class="project-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="project-filter-btn" data-filter="website" role="tab" aria-selected="false">Website</button>
+          <button type="button" class="project-filter-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile Applications</button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-category="mobile">
+            <a href="https://apps.apple.com/pk/app/foodsted/id1530698059" target="_blank" rel="noopener noreferrer" class="project-link">
+              <div class="project-thumb">
+                <img src="assets/projects/foodsted-thumbnail.png" alt="FoodSted app screens" class="project-thumb-img">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">FoodSted</h3>
+                <p class="project-meta">Ionic · Angular · iOS · App Store</p>
+                <p class="project-desc">
+                  Production-ready food delivery mobile app. I built the entire front-end using Ionic and Angular—converting design mockups into responsive screens, implementing reusable components, managing navigation and state, and integrating REST APIs. Collaborated with UI/UX designers and backend developers to deliver a smooth, user-friendly experience. Deployed on the App Store.
+                </p>
+                <span class="project-cta">View on App Store →</span>
+              </div>
+            </a>
+          </article>
+          <article class="project-card" data-category="website">
+            <a href="https://pioneerauctions.ae/" class="project-link" target="_blank" rel="noopener noreferrer">
+              <div class="project-thumb">
+                <img src="assets/projects/pioneer-auction-thumbnail.png" alt="Pioneer Auction" class="project-thumb-img">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Pioneer Auction</h3>
+                <p class="project-meta">HTML · CSS · Responsive layout</p>
+                <p class="project-desc">
+                  Pioneer Auction is a leading auction platform in the UAE, connecting buyers and sellers in a trusted, professional environment. I owned the front-end implementation: building semantic HTML structure, writing maintainable CSS, and implementing a fully responsive layout so the site works seamlessly on desktop, tablet, and mobile. I focused on consistent spacing, typography, and component styling to create a clear, accessible experience for bidders and helped ensure the interface stays fast and easy to navigate as the product evolves.
+                </p>
+                <span class="project-cta">View website →</span>
+              </div>
+            </a>
+          </article>
+          <article class="project-card" data-category="website">
+            <a href="https://destinique.com/" class="project-link" target="_blank" rel="noopener noreferrer">
+              <div class="project-thumb">
+                <img src="assets/projects/destinique-thumbnail.png" alt="Destinique" class="project-thumb-img">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Destinique</h3>
+                <p class="project-meta">Angular · Performance · Front-end</p>
+                <p class="project-desc">
+                  Destinique is a luxury travel advisor and vacation rental platform—curated villas, boutique hotels, and concierge services worldwide. I built the front-end in Angular and was responsible for improving overall website quality and structure: refactoring components and modules for maintainability, optimizing load times and runtime performance, and ensuring a smooth experience across properties, map, and booking flows. The result is a fast, reliable site that matches the high standard of the brand.
+                </p>
+                <span class="project-cta">View website →</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-subtitle">Open to new opportunities and collaborations</p>
+        <div class="contact-links">
+          <a href="mailto:zohaibjawaid92@gmail.com" class="contact-link">Email</a>
+          <a href="https://www.linkedin.com/in/zohaibjawaid92" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+          <a href="https://github.com/zohaibjawaid92" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Zohaib Jawaid. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
